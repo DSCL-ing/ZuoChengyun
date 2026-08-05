@@ -1,0 +1,22 @@
+
+
+//tie，ignore是tuple的成员
+
+namespace Mock_Tuple {
+class Mock_Tuple {
+public:
+    using Mtuple = Mock_Tuple;
+    // std::tuple 的 operator= 底层伪代码
+    Mtuple &operator=(const Mtuple &other) {
+        // 把 other 里的第 0 个元素，赋给当前对象的第 0 个元素
+        std::get<0>(*this) = std::get<0>(other);
+        // 把 other 里的第 1 个元素，赋给当前对象的第 1 个元素
+        std::get<1>(*this) = std::get<1>(other);
+        // ... 以此类推
+        return *this;
+    }
+public:
+    int _i = 0;
+    double d = 0.0;
+};
+}; // namespace Mock_Tuple
