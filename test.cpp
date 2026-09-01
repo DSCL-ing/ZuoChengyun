@@ -14,6 +14,7 @@ constexpr std::size_t Size(const T  (&)[N]){
     return N;
 }
 
+
 auto fun(const int (&a)[3]) -> void {
     int N = Size(a);
     for (int i = 0 ;i <N; ++i){
