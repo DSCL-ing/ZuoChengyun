@@ -7,8 +7,9 @@
 #include<unordered_map>
 #include<cstdlib>
 
-//RTD: Runtime type dispatch运行时类型分发/配
 
+
+//RTD: Runtime type dispatch运行时类型分发/配
 
 using Handle = std::function<void()>;
 
@@ -27,3 +28,5 @@ int main(){
 
     return 0;
 }
+
+//typeid，输出退化后的类型。（去掉const，引用等）

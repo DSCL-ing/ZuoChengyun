@@ -1,11 +1,11 @@
 #include<iostream>
 #include<stdio.h>
 #include<type_traits>
+#include<windows.h>
 #define WIN32_LEAN_AND_MEAN  // 排除非核心模块，加快编译
 #define NOMINMAX             // 保护 std::min 和 std::max
-#include<windows.h>
 
-
+//位操作实现
 
 template <class T>
 void DecToBinary(T num)
